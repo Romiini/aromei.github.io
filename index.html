@@ -1,64 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <title>Alessandro Romei – Finance | Research | Strategy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alessandro Romei — Finance | Research | Strategy</title>
-  <meta name="description" content="Portfolio site of Alessandro Romei — CV, wins, and write-ups.">
-  <meta property="og:title" content="Alessandro Romei — Portfolio">
-  <meta property="og:description" content="CV, wins, and selected research notes.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aromei.com/">
-  <meta property="og:image" content="https://aromei.com/assets/og-cover.png">
+  <meta name="description" content="Portfolio of Alessandro Romei – Finance, Equity Research, Strategy.">
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
-  <header>
-    <div class="brand">Alessandro Romei</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="wins.html">Wins</a>
-      <a href="cv/">CV</a>
-      <a href="mailto:hello@aromei.com">Contact</a>
-      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme" data-theme-toggle>🌓</button>
-    </nav>
-  </header>
-  <main>
-    <section class="hero card">
-      <img src="assets/avatar-placeholder.png" alt="Avatar placeholder">
-      <div>
-        <h1>Hi, I’m Alessandro 👋</h1>
-        <p>Finance grad & equity research enthusiast. I build models, write about markets, and celebrate small wins (publicly, so I can’t back out later).</p>
-        <p>
-          <a class="button" href="cv/Alessandro_Romei_CV.pdf">Download CV (PDF)</a>
-          &nbsp; <a class="button" href="wins.html">See my latest wins</a>
-        </p>
-      </div>
-    </section>
 
-    <section>
-      <h2>Featured</h2>
-      <div class="card grid">
-        <div>
-          <h3><a href="posts/site-live.html">Win #1 — Site is live 🎉</a></h3>
-          <p class="muted">Published August 19, 2025</p>
-          <p>Clean, low-maintenance personal site. Minimal HTML/CSS, easy to update, no build tools.</p>
-        </div>
-      </div>
-    </section>
+<header>
+  <div class="brand">
+    <img class="logo" src="assets/logo.svg" alt="Alessandro Romei logo" />
+    <span>Alessandro Romei</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="wins.html">Wins</a>
+    <a href="cv/">CV</a>
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+      <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 18a6 6 0 100-12 6 6 0 000 12zM12 0v2m0 20v2m12-12h-2M2 12H0m19.071 7.071l-1.414-1.414M6.343 6.343L4.929 4.929m12.728 0l1.414 1.414M6.343 17.657l-1.414 1.414"/>
+      </svg>
+      <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
+      </svg>
+    </button>
+  </nav>
+</header>
 
-    <section>
-      <h2>About</h2>
+<main>
+
+  <!-- Hero -->
+  <section class="hero card">
+    <img src="assets/avatar-placeholder.png" alt="Alessandro Romei headshot">
+    <div>
+      <h1>Alessandro Romei</h1>
+      <p class="muted">Finance graduate | Equity Research | Strategy</p>
+      <p>
+        I’m passionate about financial markets, equity valuation, and strategy.  
+        On this site you’ll find my CV, research work, and personal milestones.
+      </p>
+      <p><a class="tag" href="cv/Alessandro_Romei_CV.pdf">📄 View my CV</a></p>
+    </div>
+  </section>
+
+  <!-- Recent Posts -->
+  <section>
+    <h2>Recent Posts</h2>
+    <div class="grid grid-2">
       <div class="card">
-        <p>Master’s in Finance. Enjoy valuation, strategy, and turning messy data into crisp decisions. Previously: DCFs, Monte Carlo sims, sector deep-dives. Currently: internship hunting and publishing concise research notes.</p>
-        <div class="tags">
-          <span class="tag">Equity Research</span><span class="tag">Valuation</span><span class="tag">Quant</span><span class="tag">Career</span>
-        </div>
+        <h3><a href="posts/site-live.html">🚀 This site is live</a></h3>
+        <p class="muted">Aug 2025</p>
+        <p>Launched my personal portfolio site to share my CV, equity research insights, and wins.</p>
       </div>
-    </section>
-  </main>
-  <footer>© 2025 Alessandro Romei · <a href="mailto:hello@aromei.com">hello@aromei.com</a></footer>
-  <script src="assets/script.js"></script>
+      <!-- Add more posts by duplicating this card -->
+    </div>
+  </section>
+
+  <!-- Wins Teaser -->
+  <section>
+    <h2>Highlights</h2>
+    <p>Check out some of my key academic and professional wins.</p>
+    <p><a class="tag" href="wins.html">✨ View all Wins</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <p class="muted">© 2025 Alessandro Romei · <a href="mailto:hello@aromei.com">hello@aromei.com</a></p>
+</footer>
+
+<script src="assets/script.js"></script>
 </body>
 </html>
