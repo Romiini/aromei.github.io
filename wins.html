@@ -10,24 +10,26 @@
 </head>
 <body>
   <header>
-    <div><strong>Alessandro Romei</strong></div>
+    <div class="brand">Alessandro Romei</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="wins.html">Wins</a>
       <a href="cv/">CV</a>
       <a href="mailto:hello@aromei.com">Contact</a>
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme" data-theme-toggle>🌓</button>
     </nav>
   </header>
   <main>
     <h1>Wins</h1>
     <p class="muted">Bite-sized milestones. Velocity over perfection.</p>
     <hr>
-    <ul>
-      <li><strong>August 19, 2025:</strong> Launched v1 of my personal site.</li>
-      <li><strong>July 30, 2025:</strong> Wrapped a new equity research write-up and cleaned the model.</li>
-      <li><strong>June 22, 2025:</strong> Completed a Monte Carlo sim to stress-test a DCF.</li>
-    </ul>
+    <div class="grid grid-2">
+      <div class="card"><strong>August 19, 2025:</strong> Launched v2 of my personal site with a cleaner design and dark mode.</div>
+      <div class="card"><strong>July 30, 2025:</strong> Wrapped a new equity research write-up and cleaned the model.</div>
+      <div class="card"><strong>June 22, 2025:</strong> Completed a Monte Carlo sim to stress-test a DCF.</div>
+    </div>
   </main>
   <footer>© 2025 Alessandro Romei</footer>
+  <script src="assets/script.js"></script>
 </body>
 </html>

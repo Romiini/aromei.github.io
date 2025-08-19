@@ -3,28 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alessandro Romei — CV</title>
-  <meta name="description" content="CV of Alessandro Romei (PDF) and inline preview.">
-  <link rel="stylesheet" href="../assets/style.css">
-  <link rel="icon" href="../assets/favicon.ico">
-  <style>iframe{width:100%;height:80vh;border:1px solid rgba(127,127,127,.25);border-radius:12px}</style>
+  <title>Alessandro Romei — Finance | Research | Strategy</title>
+  <meta name="description" content="Portfolio site of Alessandro Romei — CV, wins, and write-ups.">
+  <meta property="og:title" content="Alessandro Romei — Portfolio">
+  <meta property="og:description" content="CV, wins, and selected research notes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aromei.com/">
+  <meta property="og:image" content="https://aromei.com/assets/og-cover.png">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/favicon.ico">
 </head>
 <body>
   <header>
-    <div><strong>Alessandro Romei</strong></div>
+    <div class="brand">Alessandro Romei</div>
     <nav>
-      <a href="../index.html">Home</a>
-      <a href="../wins.html">Wins</a>
-      <a href="./">CV</a>
+      <a href="index.html">Home</a>
+      <a href="wins.html">Wins</a>
+      <a href="cv/">CV</a>
       <a href="mailto:hello@aromei.com">Contact</a>
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme" data-theme-toggle>🌓</button>
     </nav>
   </header>
   <main>
-    <h1>CV</h1>
-    <p>Download the PDF or view it inline below.</p>
-    <p><a class="button" href="Alessandro_Romei_CV.pdf">Download CV (PDF)</a></p>
-    <iframe src="Alessandro_Romei_CV.pdf" title="CV PDF"></iframe>
+    <section class="hero card">
+      <img src="assets/avatar-placeholder.png" alt="Avatar placeholder">
+      <div>
+        <h1>Hi, I’m Alessandro 👋</h1>
+        <p>Finance grad & equity research enthusiast. I build models, write about markets, and celebrate small wins (publicly, so I can’t back out later).</p>
+        <p>
+          <a class="button" href="cv/Alessandro_Romei_CV.pdf">Download CV (PDF)</a>
+          &nbsp; <a class="button" href="wins.html">See my latest wins</a>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured</h2>
+      <div class="card grid">
+        <div>
+          <h3><a href="posts/site-live.html">Win #1 — Site is live 🎉</a></h3>
+          <p class="muted">Published August 19, 2025</p>
+          <p>Clean, low-maintenance personal site. Minimal HTML/CSS, easy to update, no build tools.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>About</h2>
+      <div class="card">
+        <p>Master’s in Finance. Enjoy valuation, strategy, and turning messy data into crisp decisions. Previously: DCFs, Monte Carlo sims, sector deep-dives. Currently: internship hunting and publishing concise research notes.</p>
+        <div class="tags">
+          <span class="tag">Equity Research</span><span class="tag">Valuation</span><span class="tag">Quant</span><span class="tag">Career</span>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>© 2025 Alessandro Romei</footer>
+  <footer>© 2025 Alessandro Romei · <a href="mailto:hello@aromei.com">hello@aromei.com</a></footer>
+  <script src="assets/script.js"></script>
 </body>
 </html>
