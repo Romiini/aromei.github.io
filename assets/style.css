@@ -56,3 +56,24 @@ h3{ margin:.8em 0 .3em }
 section + section{ margin-top:28px }
 footer{ padding:24px var(--pad); color:var(--muted) }
 hr{ border:0; height:1px; background:var(--border); margin:24px 0 }
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg);
+}
+
+.theme-toggle .icon {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+:root:not([data-theme="dark"]) .theme-toggle .sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .moon { display: block; }
+
