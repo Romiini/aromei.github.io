@@ -3,26 +3,29 @@
   --maxw: 920px; --pad: 24px; --radius: 16px;
   --fg:#111; --bg:#ffffff; --muted:#62666d; --link:#0a66c2;
   --card:#ffffff; --border:rgba(20,20,20,.08); --shadow: 0 10px 30px rgba(0,0,0,.07);
+  --bg-grad1: radial-gradient(1200px 600px at 20% -10%, rgba(124,164,255,.18), transparent);
+  --bg-grad2: radial-gradient(1000px 500px at 120% 10%, rgba(255,137,196,.15), transparent);
 }
-@media (prefers-color-scheme: dark){
-  :root{
-    --fg:#e9e9e9; --bg:#0b0c10; --muted:#a4a8b3; --link:#8ab4f8;
-    --card:#101219; --border:rgba(255,255,255,.08); --shadow: 0 10px 30px rgba(0,0,0,.4);
-  }
+
+:root[data-theme="dark"]{
+  --fg:#e9e9e9; --bg:#0b0c10; --muted:#a4a8b3; --link:#8ab4f8;
+  --card:#101219; --border:rgba(255,255,255,.08); --shadow: 0 10px 30px rgba(0,0,0,.4);
+  --bg-grad1: radial-gradient(1200px 600px at 20% -10%, rgba(124,164,255,.10), transparent);
+  --bg-grad2: radial-gradient(1000px 500px at 120% 10%, rgba(255,137,196,.08), transparent);
 }
+
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
-  color:var(--fg); background: radial-gradient(1200px 600px at 20% -10%, rgba(124, 164, 255,.18), transparent),
-                       radial-gradient(1000px 500px at 120% 10%, rgba(255, 137, 196,.15), transparent),
-                       var(--bg);
-  font:16px/1.65 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+  color:var(--fg);
+  background: var(--bg-grad1), var(--bg-grad2), var(--bg);
+  font:16px/1.65 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif;
   -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
 header, footer, main{max-width:var(--maxw); margin:0 auto}
 header{
   padding:18px var(--pad); display:flex; align-items:center; justify-content:space-between; position:sticky; top:0;
-  background:rgba(255,255,255,.55); backdrop-filter:saturate(180%) blur(8px); border-bottom:1px solid var(--border);
+  background:color-mix(in oklab, var(--bg) 70%, transparent); backdrop-filter:saturate(180%) blur(8px); border-bottom:1px solid var(--border);
 }
 @media (prefers-color-scheme: dark){ header{ background:rgba(16,18,25,.6) } }
 .brand{ font-weight:700; letter-spacing:.2px }
