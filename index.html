@@ -10,12 +10,14 @@
 </head>
 <body>
 
-<header>
-    <span>Alessandro Romei</span>
+<header class="main-header">
+  <div class="header-left">
+    <img src="assets/avatar-placeholder.png" alt="Alessandro Romei headshot" class="avatar-rounded">
+    <span class="header-name">Alessandro Romei</span>
   </div>
-  <nav>
+  <div class="header-nav">
     <a href="index.html">Home</a>
-    <a href="wins.html">Wins</a>
+    <a href="posts/">Posts</a>
     <a href="cv/">CV</a>
     <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
       <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -25,45 +27,39 @@
         <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
       </svg>
     </button>
-  </nav>
+  </div>
 </header>
 
-<main>
-
-  <!-- Hero -->
-  <section class="hero card">
-    <img src="assets/avatar-placeholder.png" alt="Alessandro Romei headshot">
-    <div>
-      <h1>Alessandro Romei</h1>
-      <p class="muted">Finance graduate | Equity Research | Strategy</p>
-      <p>
-        I’m passionate about financial markets, equity valuation, and strategy.  
-        On this site you’ll find my CV, research work, and personal milestones.
-      </p>
-      <p><a class="tag" href="cv/Alessandro_Romei_CV.pdf">📄 View my CV</a></p>
-    </div>
+<main class="homepage-layout">
+  <section class="intro-column card">
+    <img src="assets/avatar-placeholder.png" alt="Alessandro Romei headshot" class="avatar-large avatar-rounded">
+    <h1>Alessandro Romei</h1>
+    <p class="muted">Finance graduate | Equity Research | Strategy</p>
+    <p>
+      Welcome! I'm Alessandro, passionate about financial markets, equity valuation, and strategy.<br>
+      Here, you'll find my CV, research, and achievements.
+    </p>
+    <p><a class="tag" href="mailto:hello@aromei.com">Contact me</a></p>
   </section>
 
-  <!-- Recent Posts -->
-  <section>
-    <h2>Recent Posts</h2>
-    <div class="grid grid-2">
-      <div class="card">
-        <h3><a href="posts/site-live.html">🚀 This site is live</a></h3>
-        <p class="muted">Aug 2025</p>
-        <p>Launched my personal portfolio site to share my CV, equity research insights, and wins.</p>
+  <section class="right-columns">
+    <div class="recent-posts card">
+      <h2>Recent Posts</h2>
+      <div>
+        <div class="post-card">
+          <h3><a href="posts/site-live.html">🚀 This site is live</a></h3>
+          <p class="muted">Aug 2025</p>
+          <p>Launched my personal portfolio site to share my CV, equity research insights, and wins.</p>
+        </div>
+        <!-- Add more posts here -->
       </div>
-      <!-- Add more posts by duplicating this card -->
+    </div>
+    <div class="cv-preview card">
+      <h2>My CV</h2>
+      <p>See my professional experience, skills, and education.</p>
+      <a class="tag" href="cv/Alessandro_Romei_CV.pdf" target="_blank">📄 View CV</a>
     </div>
   </section>
-
-  <!-- Wins Teaser -->
-  <section>
-    <h2>Highlights</h2>
-    <p>Check out some of my key academic and professional wins.</p>
-    <p><a class="tag" href="wins.html">✨ View all Wins</a></p>
-  </section>
-
 </main>
 
 <footer>
