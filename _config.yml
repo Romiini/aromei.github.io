@@ -2,7 +2,5 @@ title: Alessandro Romei
 tagline: Finance · Equity Research · Strategy
 author: Alessandro Romei
 description: Portfolio of Alessandro Romei — CV, posts, and research notes.
-url: ""   # set to https://aromei.com after DNS
-baseurl: "" # leave blank for root
 markdown: kramdown
 permalink: /posts/:title/

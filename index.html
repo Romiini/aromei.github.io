@@ -1,53 +1,47 @@
 ---
 layout: default
 title: Home
+description: Portfolio of Alessandro Romei — finance, equity research, strategy.
 ---
-<div class="grid-2">
 
-  <section class="card">
-    <div class="intro-header">
-      <img src="{{ '/assets/avatar.jpg' | relative_url }}" alt="Alessandro Romei" class="intro-avatar">
-      <div>
-        <h1 class="intro-name">{{ site.title }}</h1>
-        <p class="muted">{{ site.tagline }}</p>
-      </div>
+<div class="card">
+  <div class="intro-header">
+    <img src="{{ '/assets/avatar.jpg' | relative_url }}" alt="Alessandro Romei" class="intro-avatar">
+    <div>
+      <h1 class="intro-name">{{ site.title | default: 'Alessandro Romei' }}</h1>
+      <p class="muted">{{ site.tagline | default: 'Finance · Equity Research · Strategy' }}</p>
     </div>
+  </div>
 
-    <p>
-      I recently completed my Master’s in Finance at Nova School of Business and Economics,
-      specializing in corporate finance and equity valuation. My thesis focused on a full
-      equity research report of Prysmian S.p.A., including a DCF valuation, Monte Carlo
-      simulations, and segment-level forecasts.
-    </p>
+  <p>
+    I recently completed my Master’s in Finance at Nova School of Business and Economics,
+    specializing in corporate finance and equity valuation. My thesis focused on Prysmian S.p.A.,
+    including DCF valuation, Monte Carlo simulations, and segment-level forecasts.
+  </p>
 
-    <p>
-      I’m passionate about applying rigorous financial analysis to real-world investment
-      decisions and I’m eager to begin my career in equity research, investment banking,
-      or strategy roles.
-    </p>
+  <p>
+    I’m passionate about applying rigorous financial analysis to investment decisions and I’m eager
+    to start my career in equity research, investment banking, or strategy roles.
+  </p>
 
-    <p><a class="btn" href="{{ '/cv/Alessandro_Romei_CV.pdf' | relative_url }}">📄 Download CV</a></p>
-  </section>
+  <p><a class="btn" href="{{ '/cv/Alessandro_Romei_CV.pdf' | relative_url }}">📄 Download CV</a></p>
+</div>
 
-  <section class="right-column">
-    <div class="card">
-      <h2>Recent Posts</h2>
-      {% assign recent = site.posts | slice: 0, 3 %}
-      {% for post in recent %}
-        <div class="post-card">
-          <h3><a href="{{ post.url | relative_url }}">{{ post.icon }} {{ post.title }}</a></h3>
-          <div class="meta">{{ post.date | date: "%b %d, %Y" }}</div>
-          <p>{{ post.description }}</p>
-        </div>
-      {% endfor %}
-      <p style="margin-top:12px"><a href="{{ '/posts/' | relative_url }}">View all posts →</a></p>
+<div class="card">
+  <h2>Recent Posts</h2>
+  {% assign recent = site.posts | slice: 0, 3 %}
+  {% for post in recent %}
+    <div class="post-card">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.icon }} {{ post.title }}</a></h3>
+      <div class="meta">{{ post.date | date: "%b %d, %Y" }}</div>
+      <p>{{ post.description }}</p>
     </div>
+  {% endfor %}
+  <p><a href="{{ '/posts/' | relative_url }}">View all posts →</a></p>
+</div>
 
-    <div class="card">
-      <h2>CV Preview</h2>
-      <p>Download my latest CV to explore my education, finance experience, and research expertise.</p>
-      <p><a class="btn-outline" href="{{ '/cv/Alessandro_Romei_CV.pdf' | relative_url }}">View CV</a></p>
-    </div>
-  </section>
-
+<div class="card">
+  <h2>CV Preview</h2>
+  <p>Download my latest CV to explore my education, finance experience, and research expertise.</p>
+  <p><a class="btn" href="{{ '/cv/Alessandro_Romei_CV.pdf' | relative_url }}">View CV</a></p>
 </div>
