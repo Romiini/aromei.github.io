@@ -24,4 +24,3 @@ Key risks include FX volatility, commodity pricing, and execution on the transmi
 
 ---
 
-📄 **[Download the full report (PDF)]({{ page.pdf | relative_url }})**
