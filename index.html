@@ -1,79 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Alessandro Romei – Finance | Research | Strategy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Alessandro Romei – finance, equity research, and strategy.">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-</head>
-<body>
-<header>
-  <div class="header-inner">
-    <div class="brand">Alessandro Romei</div>
+---
+layout: default
+title: Home
+---
+<div class="grid-2">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="posts/">Posts</a>
-      <a href="cv/">CV</a>
-      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
-        <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 18a6 6 0 100-12 6 6 0 000 12zM12 0v2m0 20v2m12-12h-2M2 12H0m19.071 7.071l-1.414-1.414M6.343 6.343L4.929 4.929m12.728 0l1.414 1.414M6.343 17.657l-1.414 1.414"/>
-        </svg>
-        <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
-        </svg>
-      </button>
-    </nav>
-  </div>
-</header>
-<main class="grid-2">
-    <section class="intro card">
-      <div class="intro-header">
-        <img src="assets/avatar.jpg" alt="Alessandro Romei" class="avatar">
-        <div>
-          <h1>Alessandro Romei</h1>
-          <p class="muted">Finance Graduate · Equity Research · Valuation</p>
-        </div>
+  <section class="card">
+    <div class="intro-header">
+      <img src="{{ '/assets/avatar.jpg' | relative_url }}" alt="Alessandro Romei" class="intro-avatar">
+      <div>
+        <h1 class="intro-name">{{ site.title }}</h1>
+        <p class="muted">{{ site.tagline }}</p>
       </div>
-      
-      <p>
-      I recently completed my Master’s in Finance at Nova School of Business and Economics, 
-      where I specialized in corporate finance and equity valuation. My thesis focused on 
-      a full equity research report of Prysmian S.p.A., including a DCF valuation, 
-      Monte Carlo simulations, and segment-level financial forecasts.
-      </p>
-      
-      <p>
-      I’m passionate about applying rigorous financial analysis to real-world investment 
-      decisions and I am eager to begin my career in equity research, investment banking, 
-      or strategy roles where I can continue developing my skills and contribute to 
-      high-impact projects.
-      </p>
-      
-      <p>
-      <a class="btn" href="cv/Alessandro_Romei_CV.pdf">📄 Download CV</a>
-      </p>
     </div>
+
+    <p>
+      I recently completed my Master’s in Finance at Nova School of Business and Economics,
+      specializing in corporate finance and equity valuation. My thesis focused on a full
+      equity research report of Prysmian S.p.A., including a DCF valuation, Monte Carlo
+      simulations, and segment-level forecasts.
+    </p>
+
+    <p>
+      I’m passionate about applying rigorous financial analysis to real-world investment
+      decisions and I’m eager to begin my career in equity research, investment banking,
+      or strategy roles.
+    </p>
+
+    <p><a class="btn" href="{{ '/cv/Alessandro_Romei_CV.pdf' | relative_url }}">📄 Download CV</a></p>
   </section>
+
   <section class="right-column">
     <div class="card">
       <h2>Recent Posts</h2>
-      <div class="post-card">
-        <h3><a href="posts/site-live.html">🚀 This site is live</a></h3>
-        <div class="meta">Aug 19, 2025</div>
-        <p>Launched my portfolio with a professional two-column layout and cohesive palette.</p>
-      </div>
+      {% assign recent = site.posts | slice: 0, 3 %}
+      {% for post in recent %}
+        <div class="post-card">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.icon }} {{ post.title }}</a></h3>
+          <div class="meta">{{ post.date | date: "%b %d, %Y" }}</div>
+          <p>{{ post.description }}</p>
+        </div>
+      {% endfor %}
+      <p style="margin-top:12px"><a href="{{ '/posts/' | relative_url }}">View all posts →</a></p>
     </div>
+
     <div class="card">
       <h2>CV Preview</h2>
       <p>Download my latest CV to explore my education, finance experience, and research expertise.</p>
-      <p><a class="btn-outline" href="cv/Alessandro_Romei_CV.pdf">View CV</a></p>
+      <p><a class="btn-outline" href="{{ '/cv/Alessandro_Romei_CV.pdf' | relative_url }}">View CV</a></p>
     </div>
   </section>
-</main>
-<footer><div class="footer-inner">© 2025 Alessandro Romei · <a href="mailto:hello@aromei.com">hello@aromei.com</a></div></footer>
-<script src="assets/script.js"></script>
-</body>
-</html>
+
+</div>
