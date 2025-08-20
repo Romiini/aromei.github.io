@@ -1,0 +1,16 @@
+---
+layout: default
+title: Posts
+description: All posts by Alessandro Romei
+---
+
+<div class="card">
+  <h1>All Posts</h1>
+  {% for post in site.posts %}
+    <div class="post-card">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.icon }} {{ post.title }}</a></h3>
+      <div class="meta">{{ post.date | date: "%b %d, %Y" }}</div>
+      <p>{{ post.description }}</p>
+    </div>
+  {% endfor %}
+</div>
