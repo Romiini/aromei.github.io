@@ -203,3 +203,30 @@ footer {
   font-size: 0.9rem;
   color: var(--muted);
 }
+/* Post page tweaks */
+.post h1 {
+  margin-bottom: 0.5em;
+  color: var(--text);
+}
+
+.post .meta {
+  font-size: 0.9em;
+  color: var(--muted);
+  margin-bottom: 1.5em;
+}
+
+.post-content {
+  line-height: 1.7;
+}
+
+.post-content h2, 
+.post-content h3 {
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+  color: var(--accent);
+}
+
+.post-content p {
+  margin-bottom: 1em;
+}
+
